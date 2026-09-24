@@ -1,0 +1,1228 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SolusAuto | Le souci du détail</title>
+
+    <meta
+        name="description"
+        content="SolusAuto - Nettoyage intérieur automobile et textile à Caen et alentours."
+    >
+
+    <style>
+
+        /* =========================
+           VARIABLES
+        ========================= */
+
+        :root {
+            --black: #050509;
+            --black-2: #0b0b12;
+            --dark: #11121a;
+
+            --blue: #315b9b;
+            --blue-light: #5277b5;
+
+            --pink: #E83E87;
+            --blue: #FF5FA2;
+            --pink-dark: #d64494;
+
+            --lavender: #9186be;
+
+            --white: #ffffff;
+            --grey: #aeb0ba;
+        }
+
+
+        /* =========================
+           RESET
+        ========================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: var(--black);
+            color: var(--white);
+            line-height: 1.6;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+
+        /* =========================
+           HEADER
+        ========================= */
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+
+            width: 100%;
+
+            z-index: 1000;
+
+            background: rgba(5, 5, 9, 0.92);
+
+            backdrop-filter: blur(12px);
+
+            border-bottom: 1px solid rgba(211, 155, 181, 0.20);
+        }
+
+        nav {
+            max-width: 1200px;
+
+            margin: auto;
+
+            min-height: 75px;
+
+            padding: 10px 25px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .brand {
+            font-size: 24px;
+
+            font-weight: 800;
+
+            letter-spacing: 1px;
+        }
+
+        .brand span {
+            color: var(--pink-light);
+        }
+
+        .nav-links {
+            display: flex;
+
+            gap: 30px;
+        }
+
+        .nav-links a {
+            font-size: 15px;
+
+            color: #eeeeee;
+
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--pink-light);
+        }
+
+
+        /* =========================
+           HERO
+        ========================= */
+
+        .hero {
+            min-height: 100vh;
+
+            padding: 150px 20px 90px;
+
+            display: flex;
+
+            justify-content: center;
+            align-items: center;
+
+            text-align: center;
+
+            background:
+                radial-gradient(
+                    circle at 30% 45%,
+                    rgba(49, 91, 155, 0.28),
+                    transparent 40%
+                ),
+
+                radial-gradient(
+                    circle at 70% 55%,
+                    rgba(180, 119, 150, 0.28),
+                    transparent 42%
+                ),
+
+                var(--black);
+        }
+
+        .hero-content {
+            max-width: 900px;
+        }
+.hero-logo {
+    width: 180px;
+    height: 180px;
+    object-fit: contain;
+    margin-bottom: 20px;
+}
+        .hero h1 {
+            font-size: clamp(55px, 10vw, 105px);
+
+            line-height: 1;
+
+            font-weight: 900;
+
+            letter-spacing: 3px;
+
+            margin-bottom: 20px;
+        }
+
+        .hero h1 span {
+            color:#315b9b
+        }
+
+        .slogan {
+            font-size: clamp(25px, 4vw, 42px);
+
+            font-weight: 600;
+
+            margin-bottom: 20px;
+        }
+
+        .hero-text {
+            max-width: 650px;
+
+            margin: auto;
+
+            color: var(--grey);
+
+            font-size: 18px;
+
+            margin-bottom: 15px;
+        }
+
+        .hero-location {
+            color: var(--lavender);
+
+            font-weight: 600;
+
+            margin-bottom: 35px;
+        }
+
+
+        /* =========================
+           BUTTON
+        ========================= */
+
+        .button {
+            display: inline-block;
+
+            padding: 15px 32px;
+
+            border-radius: 8px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    var(--pink-dark),
+                    var(--pink-light)
+                );
+
+            color: white;
+
+            font-weight: 700;
+
+            box-shadow:
+                0 10px 30px rgba(180, 119, 150, 0.25);
+
+            transition: 0.3s;
+        }
+
+        .button:hover {
+            transform: translateY(-3px);
+
+            box-shadow:
+                0 15px 40px rgba(180, 119, 150, 0.40);
+        }
+
+
+        /* =========================
+           GENERAL SECTIONS
+        ========================= */
+
+        section {
+            padding: 100px 20px;
+        }
+
+        .container {
+            max-width: 1150px;
+
+            margin: auto;
+        }
+
+        .section-title {
+            text-align: center;
+
+            margin-bottom: 55px;
+        }
+
+        .section-title h2 {
+            font-size: clamp(34px, 5vw, 50px);
+
+            margin-bottom: 10px;
+        }
+
+        .section-title h2 span {
+            color: var(--pink-light);
+        }
+
+        .section-title p {
+            color: var(--grey);
+        }
+
+
+        /* =========================
+           SERVICES
+        ========================= */
+
+        .services {
+            background:
+                linear-gradient(
+                    180deg,
+                    #090910,
+                    #101725
+                );
+        }
+
+        .cards {
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 25px;
+        }
+
+        .card {
+            padding: 35px 28px;
+
+            background:
+                rgba(255, 255, 255, 0.035);
+
+            border:
+                1px solid rgba(211, 155, 181, 0.20);
+
+            border-radius: 15px;
+
+            text-align: center;
+
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-7px);
+
+            border-color: var(--pink);
+
+            box-shadow:
+                0 15px 40px rgba(0, 0, 0, 0.35);
+        }
+
+        .icon {
+            font-size: 45px;
+
+            margin-bottom: 15px;
+        }
+
+        .card h3 {
+            font-size: 22px;
+
+            margin-bottom: 12px;
+        }
+
+        .card p {
+            color: var(--grey);
+        }
+
+
+        /* =========================
+           REALISATIONS
+        ========================= */
+
+        .realisations {
+            background: var(--black);
+        }
+
+        .video-placeholder {
+            display: grid;
+
+            grid-template-columns:
+                repeat(2, 1fr);
+
+            gap: 30px;
+        }
+
+        .video-box {
+            min-height: 300px;
+
+            display: flex;
+
+            justify-content: center;
+            align-items: center;
+
+            text-align: center;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    rgba(49, 91, 155, 0.20),
+                    rgba(180, 119, 150, 0.20)
+                );
+
+            border:
+                1px solid rgba(211, 155, 181, 0.25);
+
+            border-radius: 15px;
+        }
+.video-box video {
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+    display: block;
+    margin: 10px auto 20px;
+    border-radius: 10px;
+}
+        .video-box-content {
+            padding: 30px;
+        }
+
+        .video-box h3 {
+            font-size: 24px;
+
+            margin-bottom: 10px;
+        }
+
+        .video-box p {
+            color: var(--grey);
+        }
+
+
+        /* =========================
+           TARIFS
+        ========================= */
+
+        .prices {
+            background:
+                radial-gradient(
+                    circle at center,
+                    rgba(49, 91, 155, 0.20),
+                    transparent 55%
+                ),
+
+                var(--black-2);
+        }
+.tarif-category {
+    text-align: center;
+    margin: 45px 0 30px;
+}
+
+.tarif-category h3 {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.tarif-category p {
+    font-size: 20px;
+}
+
+.auto-grid {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 850px;
+    margin: 0 auto;
+    gap: 0 !important;
+}
+.textile-grid {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 850px;
+    margin: 0 auto;
+    gap: 0 !important;
+}
+
+.textile-grid .price-card {
+    width: 280px;
+    flex: 0 0 280px;
+}
+.auto-grid .price-card {
+    width: 280px;
+    flex: 0 0 280px;
+}
+ 
+.price-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 25px;
+        }
+
+        .price-card {
+            padding: 35px 25px;
+
+            text-align: center;
+
+            background:
+                rgba(255, 255, 255, 0.035);
+
+            border:
+                1px solid rgba(211, 155, 181, 0.20);
+
+            border-radius: 15px;
+        }
+
+        .price-card h3 {
+            font-size: 22px;
+
+            margin-bottom: 15px;
+        }
+
+        .price {
+            font-size: 32px;
+
+            font-weight: 800;
+
+            color: var(--pink-light);
+
+            margin-bottom: 15px;
+        }
+
+        .price-card p {
+            color: var(--grey);
+        }
+
+
+        /* =========================
+           ABOUT
+        ========================= */
+
+        .about {
+            background: #08080e;
+
+            text-align: center;
+        }
+
+        .about-box {
+            max-width: 800px;
+
+            margin: auto;
+
+            padding: 45px 30px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    rgba(49, 91, 155, 0.12),
+                    rgba(180, 119, 150, 0.12)
+                );
+
+            border:
+                1px solid rgba(211, 155, 181, 0.20);
+
+            border-radius: 16px;
+        }
+
+        .about-box p {
+            color: var(--grey);
+
+            font-size: 18px;
+
+            margin-bottom: 18px;
+        }
+
+
+        /* =========================
+           CONTACT
+        ========================= */
+
+        .contact {
+            text-align: center;
+
+            background:
+                radial-gradient(
+                    circle at center,
+                    rgba(180, 119, 150, 0.22),
+                    transparent 55%
+                ),
+
+                #08080d;
+        }
+
+        .contact h2 {
+            font-size: clamp(34px, 5vw, 52px);
+
+            margin-bottom: 15px;
+        }
+
+        .contact h2 span {
+            color: var(--pink-light);
+        }
+
+        .contact p {
+            color: var(--grey);
+
+            margin-bottom: 30px;
+        }
+
+        .contact-buttons {
+            display: flex;
+
+            justify-content: center;
+
+            gap: 15px;
+
+            flex-wrap: wrap;
+        }
+
+        .button-secondary {
+            display: inline-block;
+
+            padding: 15px 30px;
+
+            border:
+                1px solid var(--lavender);
+
+            border-radius: 8px;
+
+            font-weight: 700;
+
+            transition: 0.3s;
+        }
+
+        .button-secondary:hover {
+            background:
+                rgba(145, 134, 190, 0.15);
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            padding: 35px 20px;
+
+            text-align: center;
+
+            background: #030305;
+
+            border-top:
+                1px solid rgba(211, 155, 181, 0.20);
+
+            color: #777;
+        }
+
+        footer strong {
+            color: var(--pink-light);
+        }
+
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 800px) {
+
+            .nav-links {
+                display: none;
+            }
+
+            nav {
+                justify-content: center;
+            }
+
+            .cards,
+            .price-grid,
+            .video-placeholder {
+                grid-template-columns: 1fr;
+            }
+
+            .hero {
+                padding-top: 120px;
+            }
+
+            .hero-text {
+                font-size: 16px;
+            }
+
+            section {
+                padding: 75px 18px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     HEADER
+========================= -->
+
+<header>
+
+    <nav>
+
+        <a href="#" class="brand">
+            Solus<span>Auto</span>
+        </a>
+
+        <div class="nav-links">
+
+            <a href="#prestations">
+                Prestations
+            </a>
+
+            <a href="#realisations">
+                Réalisations
+            </a>
+
+            <a href="#tarifs">
+                Tarifs
+            </a>
+
+            <a href="#contact">
+                Contact
+            </a>
+
+        </div>
+
+    </nav>
+
+</header>
+
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<section class="hero">
+
+    <div class="hero-content">
+<img src="logo.png" alt="Logo SolusAuto" class="hero-logo">
+        <h1>
+            Solus<span>Auto</span>
+        </h1>
+
+        <div class="slogan">
+            Le souci du détail.
+        </div>
+
+        <p class="hero-text">
+
+            Nettoyage intérieur automobile
+            et nettoyage textile.
+
+            <br>
+
+            Un intérieur propre,
+            soigné et agréable à retrouver.
+
+        </p>
+
+        <div class="hero-location">
+            📍 Caen et alentours
+        </div>
+
+        <a href="https://calendar.app.google/t2Qqt5GhvyLuDu5Z6" class="button" target="_blank">
+            Prendre rendez-vous
+        </a>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     PRESTATIONS
+========================= -->
+
+<section class="services" id="prestations">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>
+                Nos <span>prestations</span>
+            </h2>
+
+            <p>
+                Le souci du détail dans chaque intervention.
+            </p>
+
+        </div>
+
+
+        <div class="cards">
+
+
+            <div class="card">
+
+                <div class="icon">
+                    🚗
+                </div>
+
+                <h3>
+                    Nettoyage automobile
+                </h3>
+
+                <p>
+                    Nettoyage intérieur complet :
+                    sièges, moquettes, plastiques
+                    et différentes surfaces.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="icon">
+                    🛋️
+                </div>
+
+                <h3>
+                    Nettoyage canapé
+                </h3>
+
+                <p>
+                    Nettoyage en profondeur
+                    et détachage des textiles.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="icon">
+                    🧼
+                </div>
+
+                <h3>
+                    Tapis & textiles
+                </h3>
+
+                <p>
+                    Nettoyage des tapis,
+                    moquettes et autres textiles.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     REALISATIONS
+========================= -->
+
+<section class="realisations" id="realisations">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>
+                Nos <span>réalisations</span>
+            </h2>
+
+            <p>
+                Découvrez le résultat avant et après nos interventions.
+            </p>
+
+        </div>
+
+
+        <div class="video-placeholder">
+
+    <div class="video-box">
+        <div class="video-box-content">
+            <h3>Réalisation 1</h3>
+
+            <div class="video-label">AVANT</div>
+            <video controls playsinline preload="metadata">
+                <source src="avant1.mp4" type="video/mp4">
+                Votre navigateur ne prend pas en charge la vidéo.
+            </video>
+
+            <div class="video-label">APRÈS</div>
+            <video controls playsinline preload="metadata">
+                <source src="apres1.mp4" type="video/mp4">
+                Votre navigateur ne prend pas en charge la vidéo.
+            </video>
+        </div>
+    </div>
+
+    <div class="video-box">
+        <div class="video-box-content">
+            <h3>Réalisation 2</h3>
+
+            <div class="video-label">AVANT</div>
+            <video controls playsinline preload="metadata">
+                <source src="avant2.mp4" type="video/mp4">
+                Votre navigateur ne prend pas en charge la vidéo.
+            </video>
+
+            <div class="video-label">APRÈS</div>
+            <video controls playsinline preload="metadata">
+                <source src="apres2.mp4" type="video/mp4">
+                Votre navigateur ne prend pas en charge la vidéo.
+            </video>
+        </div>
+    </div>
+
+</div>
+</section>
+
+
+
+<!-- =========================
+     TARIFS
+========================= -->
+
+
+  <section class="prices" id="tarifs">
+    <div class="container">
+
+        <div class="section-title">
+            <h2>Nos <span>tarifs</span></h2>
+            <p>Des prestations adaptées à vos besoins.</p>
+        </div>
+
+        <!-- ==================== VOITURE ==================== -->
+
+        <div class="tarif-category auto-category">
+    <h3>🚗 Nettoyage intérieur automobile</h3>
+    <p>Redonnez une seconde vie à votre intérieur</p>
+</div>
+
+       <div class="price-grid auto-grid">
+
+            <div class="price-card">
+                <h3>Formule CLEAN</h3>
+
+                <div class="price">À partir de 79 €</div>
+
+                <p>
+                    <strong>Durée : 2h30</strong><br><br>
+                    • Aspiration de l’habitacle<br><br>
+                    • Vitres<br><br>
+                    • Nettoyage & soin des plastiques<br><br>
+                    • Contours de portes & coffre<br><br>
+                    • Pressing des tapis
+                </p>
+            </div>
+
+            <div class="price-card">
+                <h3>Formule PREMIUM</h3>
+
+                <div class="price">À partir de 109 €</div>
+
+                <p>
+                    <strong>Durée : 3h30</strong><br><br>
+                    • Formule CLEAN<br><br>
+                    • Pressing des sièges / cuirs<br><br>
+                    • Pressing des moquettes<br><br>
+                    • Désinfection vapeur de l’habitacle
+                </p>
+            </div>
+
+        </div>
+
+        <div class="price-card price-card-wide">
+            <h3>Prestations à la carte</h3>
+
+            <div class="price">Selon prestation</div>
+
+            <p>
+                • Traitement taches spéciales : <strong>+30 €</strong><br><br>
+                • Détachage des textiles : <strong>+35 €</strong><br><br>
+                • Nettoyage et soin des cuirs : <strong>+25 €</strong><br><br>
+                • Nettoyage ciel de toit : <strong>+40 €</strong><br><br>
+                • Poils d’animaux : <strong>+20 €</strong><br><br>
+                • Poils d’animaux importants : <strong>+40 €</strong>
+            </p>
+        </div>
+
+        <p class="price-note">
+            * Certaines prestations sont comprises dans les formules.
+        </p>
+
+
+        <!-- ==================== TEXTILES ==================== -->
+
+        <div class="tarif-category textiles-category">
+            <h3>🛋️ Nettoyage de vos textiles</h3>
+            <p>Redonnez une seconde vie à vos canapés, fauteuils et tapis.</p>
+        </div>
+
+        <div class="textile-grid">
+
+            <div class="price-card">
+                <h3>Canapé & Fauteuil</h3>
+
+                <div class="price">À partir de 50 €</div>
+
+                <p>
+                    • Aspiration et préparation<br><br>
+                    • Détachage<br><br>
+                    • Nettoyage en profondeur<br><br>
+                    • Injection-extraction<br><br>
+                    • Finition soignée
+                    <br><br>
+                    <small>
+                        *Tarif ajusté selon les dimensions et l’état du textile.
+                    </small>
+                </p>
+            </div>
+
+            <div class="price-card">
+                <h3>Tapis</h3>
+
+                <div class="price">À partir de 10 €/m²</div>
+
+                <p>
+                    • Aspiration et préparation<br><br>
+                    • Détachage<br><br>
+                    • Nettoyage en profondeur<br><br>
+                    • Injection-extraction<br><br>
+                    • Finition soignée
+                    <br><br>
+                    <strong>Exemple :</strong><br>
+                    tapis 2 × 3 m → à partir de 60 €
+                </p>
+            </div>
+
+        </div>
+
+        <div class="quote-box">
+            <h3>Devis possible</h3>
+            <p>
+                Envoyez-nous une photo pour obtenir une estimation.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+
+
+<!-- =========================
+     ABOUT
+========================= -->
+
+<section class="about">
+
+    <div class="container">
+
+        <div class="section-title">
+
+            <h2>
+                À propos de <span>SolusAuto</span>
+            </h2>
+
+            <p>
+                Le souci du détail.
+            </p>
+
+        </div>
+
+
+        <div class="about-box">
+
+            <p>
+                SolusAuto propose des prestations
+                de nettoyage intérieur automobile
+                et textile.
+            </p>
+
+            <p>
+                Chaque intervention est réalisée
+                avec une attention particulière
+                portée aux détails et au résultat final.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     CONTACT
+========================= -->
+
+<!-- =========================
+     CONTACT
+========================= -->
+
+<section class="contact" id="contact">
+
+    <div class="container">
+
+        <div class="section-title">
+            <h2>Contact <span>& Devis</span></h2>
+            <p>Une question ? Un devis ? Je suis à votre disposition.</p>
+        </div>
+
+        <div class="contact-grid">
+
+            <!-- ZONE D'INTERVENTION -->
+            <div class="contact-card">
+
+                <h3>📍 Zone d’intervention</h3>
+
+                <p class="contact-big">
+                    <strong>Caen & alentours</strong>
+                </p>
+
+                <p>
+                    Intervention à domicile,<br>
+                    au travail ou sur le lieu de votre choix.
+                </p>
+
+            </div>
+
+
+            <!-- CONTACT -->
+            <div class="contact-card">
+
+                <h3>📞 Contact & Devis</h3>
+
+                <p>
+                    Une question ? Un devis ?<br>
+                    Je suis à votre disposition.
+                </p>
+
+                <p class="contact-line">
+                    📞 <a href="tel:0699240225">06 99 24 02 25</a>
+                </p>
+
+                <p class="contact-line">
+                    📸 <a href="https://www.instagram.com/solusauto" target="_blank">
+                        @solusauto
+                    </a>
+                </p>
+
+                <p class="contact-line">
+                    📧 <a href="mailto:solusauto14@gmail.com">
+                        solusauto14@gmail.com
+                    </a>
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- INFOS SUPPLEMENTAIRES -->
+
+        <div class="contact-features">
+
+            <div>
+                <div class="feature-icon">🏠</div>
+                <h3>Intervention à domicile</h3>
+                <p>
+                    Chez vous, au travail ou sur le lieu de votre choix.
+                </p>
+            </div>
+
+            <div>
+                <div class="feature-icon">🕐</div>
+                <h3>Horaires flexibles</h3>
+                <p>
+                    En semaine et le week-end.
+                </p>
+            </div>
+
+            <div>
+                <div class="feature-icon">✓</div>
+                <h3>Produits professionnels</h3>
+                <p>
+                    Des résultats durables et respectueux des matières.
+                </p>
+            </div>
+
+        </div>
+
+
+        <!-- BOUTONS -->
+
+        <div class="contact-buttons">
+
+            <a href="tel:0699240225" class="btn">
+                📞 Appeler
+            </a>
+
+            <a href="https://www.instagram.com/solusauto"
+               target="_blank"
+               class="btn btn-secondary">
+                📸 Instagram
+            </a>
+
+            <a href="mailto:solusauto14@gmail.com" class="btn btn-secondary">
+                ✉️ Demander un devis
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+    <p>
+        © 2026
+        <strong>SolusAuto</strong>
+        — Le souci du détail
+    </p>
+
+</footer>
+
+
+</body>
+
+</html>
