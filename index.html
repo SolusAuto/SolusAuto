@@ -668,7 +668,20 @@
             section {
                 padding: 75px 18px;
             }
+     .auto-grid {
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+    }
 
+    .auto-grid .price-card {
+        width: 100%;
+        max-width: 350px;
+    }
+
+    html, body {
+        overflow-x: hidden;
+    }
         }
 
     </style>
@@ -783,7 +796,7 @@
         <div class="cards">
 
 
-            <div class="card">
+            <a href="#auto" class="card">
 
                 <div class="icon">
                     🚗
@@ -799,10 +812,10 @@
                     et différentes surfaces.
                 </p>
 
-            </div>
+            </a>
 
 
-            <div class="card">
+            <a href="#textiles" class="card">
 
                 <div class="icon">
                     🛋️
@@ -817,10 +830,10 @@
                     et détachage des textiles.
                 </p>
 
-            </div>
+            </a>
 
 
-            <div class="card">
+            <a href="#textiles" class="card">
 
                 <div class="icon">
                     🧼
@@ -835,7 +848,7 @@
                     moquettes et autres textiles.
                 </p>
 
-            </div>
+            </a>
 
 
         </div>
@@ -925,7 +938,7 @@
 
         <!-- ==================== VOITURE ==================== -->
 
-        <div class="tarif-category auto-category">
+        <div class="tarif-category auto-category" id="auto">
     <h3>🚗 Nettoyage intérieur automobile</h3>
     <p>Redonnez une seconde vie à votre intérieur</p>
 </div>
@@ -985,7 +998,7 @@
 
         <!-- ==================== TEXTILES ==================== -->
 
-        <div class="tarif-category textiles-category">
+        <div class="tarif-category textiles-category" id="textiles">
             <h3>🛋️ Nettoyage de vos textiles</h3>
             <p>Redonnez une seconde vie à vos canapés, fauteuils et tapis.</p>
         </div>
